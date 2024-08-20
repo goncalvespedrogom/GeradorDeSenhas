@@ -1,0 +1,264 @@
+*{
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+html, body {
+    height: auto;
+    min-height: 100vh;
+}
+
+html {
+    background: linear-gradient(180deg, #ffa602 0%, #332717 100%);
+}
+
+input:focus{
+    outline: none;
+}
+
+#register-container {
+    max-width: 900px;
+    min-height: 80vh;
+    margin: 2rem auto;
+    display: flex;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#register-banner {
+    background: url(img/imagembibilioteca.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+}
+
+#banner-layer{
+    background-color: #272727a9;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+#register-banner h1{
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    word-spacing: 50rem;
+}
+
+#register-banner h1 span{
+    color: #ffa602e5;
+}
+
+#register-form{
+    background-color: #FDFDFD;
+    padding: 2rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#register-form h2{
+    text-align: center;
+    margin-bottom: .5rem;
+    font-size: 2.2rem;
+}
+
+#register-form p{
+    text-align: center;
+    margin-bottom: 1.2rem;
+    color: #aaa;
+    font-size: 0.8rem;
+}
+
+.form-control{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control label{
+    font-weight: bold;
+    margin-bottom: .2rem;
+}
+
+.form-control input{
+    border: none;
+    border-bottom: 1px solid #aaa;
+    padding: 0.6rem 0;
+    transition: 0.4s;
+}
+
+.form-control input:hover{
+    border-bottom: 1px solid #ffa602e7;
+}
+
+#open-generate-password{
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#open-generate-password:hover{
+    color: #ffa602e7;
+}
+
+#register-form #generated-password{
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding: .4rem;
+    text-align: center;
+    background-color: #333;
+    display: none;
+}
+
+#register-form #generated-password p{
+    color: #fff;
+    margin-bottom: .5rem;
+}
+
+#register-form #generated-password h4{
+    color: #ffa602e7;
+    margin-bottom: .5rem;
+}
+
+#register-form input[type="submit"],
+#generate-options button,
+#copy-password{
+    background-color: #ffa602e7;
+    color: #fff;
+    opacity: 1;
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 1.4rem;
+    max-width: 150px;
+    cursor: pointer;
+    align-self: flex-end;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+#register-form input[type="submit"]:hover{
+    opacity: .8;
+}
+
+#generate-options button:hover{
+    opacity: .8;
+}
+
+#copy-password:hover{
+    opacity: .8;
+}
+
+/* segunda versão */
+#generate-options{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: .3rem;
+    background-color: #333;
+}
+
+#generate-options p{
+    color: #ffffffd0;
+}
+
+#generate-options .form-control{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#generate-options .form-control #letters{
+    accent-color: #ffa602e7;
+}
+
+#generate-options .form-control #numbers{
+    accent-color: #ffa602e7;
+}
+
+#generate-options .form-control #symbols{
+    accent-color: #ffa602e7;
+}
+
+#generate-options label {
+    font-size: .8rem;
+    color: #fff;
+}
+
+#generate-options input[type="text"]{
+    max-width: 30px;
+    text-align: center;
+    border: 1px solid #ffa602e7;
+    border-radius: .2rem;
+    color: #fff;
+    background-color: #ffa602e7;
+    font-weight: bold;
+}
+
+#generate-options button {
+    display: block;
+    margin: 0 auto;
+}
+
+#copy-password {
+    margin: .5rem auto;
+    padding: .5rem 1rem;
+}
+
+.hide{
+    display: none;
+}
+
+/* responsividade */
+@media screen and (max-width: 925px){
+    #register-banner{
+       margin-top: 10px;
+    }
+
+    #banner-layer{
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #register-banner h1{
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+        word-spacing: 0rem;
+    }
+
+    #register-container{
+        flex-direction: column;
+        align-items: center;
+        margin: 0rem 0rem;
+    }
+
+    #register-banner{
+        background-size: none;
+        width: 80%;
+    }
+
+    #register-form{
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    #register-form h2{
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 340px){
+    #register-banner h1{
+        font-size: 2rem;
+    }
+    
+}
